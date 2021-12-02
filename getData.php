@@ -9,7 +9,6 @@ function getData($conn, $steden)
     {
         $data[$counter] = $row;
         $counter++;
-        if($counter == 3){break;}
     }
     return $data;
 }
