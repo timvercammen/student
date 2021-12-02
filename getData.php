@@ -1,11 +1,16 @@
 <?php
-function GetData($sql ,$conn)
+
+function getData($conn, $steden)
 {
-    $result = $conn->query($sql);
-    $sqlarray = array();
-
-    while ($row = mysqli_fetch_assoc($result))
-        $sqlarray[] = $row;
-
-    return $sqlarray;
+    $result = $conn->query($steden);
+    $data =[];
+    $counter = 0;
+    while ($row = $result->fetch_assoc())
+    {
+        $data[$counter] = $row;
+        $counter++;
+        if($counter == 3){break;}
+    }
+    return $data;
 }
+?>

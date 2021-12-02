@@ -7,4 +7,5 @@
     $password = "";
     $dbname = "steden";
 
+global $servername,$username, $password, $dbname;
 ?>
