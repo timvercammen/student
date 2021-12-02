@@ -14,6 +14,12 @@
 </head>
 <body>
 
+<?php
+require_once "config.php";
+require_once "connection.php";
+require_once "getData.php";
+$sql = "select * from images";
+?>
 
 <div class="jumbotron text-center">
     <h1>De leukste plekken in Europa</h1>
@@ -22,14 +28,8 @@
 
 <div class="container">
     <div class="row">
+
         <?php
-        require_once "config.php";
-        require_once "connection.php";
-        require_once "getData.php";
-        $sql = "select * from images";
-
-
-        //checks for data else message "No records found"
         if(getData($conn, $sql) > "") {
 
             foreach (getData($conn, $sql) as $key => $value)
