@@ -40,7 +40,7 @@ $sql = "SELECT * from images";
                     <p><?=$value["img_width"]?> x <?=$value["img_height"]?> pixels</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
                     <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    <img src=./images/<?=$value["img_filename"]?> width='300' height='200'/></br>
+                    <img src=./images/<?=$value["img_filename"]?> width='300' height='225'/></br>
                     <a href="stad.php? img_id = <?=$value["img_id"]?>">Meer Info</a>
                 </div>
                 <?php
