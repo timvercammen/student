@@ -18,7 +18,7 @@
 require_once "config.php";
 require_once "connection.php";
 require_once "getData.php";
-$sql = "select * from images";
+$sql = "SELECT * from images";
 ?>
 
 <div class="jumbotron text-center">

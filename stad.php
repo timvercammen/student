@@ -22,12 +22,8 @@ $sql = "SELECT * from images";
 ?>
 
 <div class="jumbotron text-center">
-    <h1>De leukste plekken in Europa</h1>
-    <p>Tips voor citytrips voor vrolijke vakantiegangers!</p>
+    <h1>Details Stad</h1>
 </div>
-
-<div class="container">
-    <div class="row">
 
         <?php
         if(getData($conn, $sql) > "") {
@@ -35,14 +31,11 @@ $sql = "SELECT * from images";
             foreach (getData($conn, $sql) as $key => $value)
             {
                 ?>
-                <div class='col-sm-4'>
-                    <h3><?= $value["img_title"]?></h3>
+                    <h2><?= $value["img_title"]?></h2>
+                    <p>filename: <?=$value["img_filename"]?></p>
                     <p><?=$value["img_width"]?> x <?=$value["img_height"]?> pixels</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                    <img src=./images/<?=$value["img_filename"]?> width='300' height='200'/></br>
-                    <a href="stad.php? img_id = <?=$value["img_id"]?>">Meer Info</a>
-                </div>
+                    <img src=./images/<?=$value["img_filename"]?> width="75%" height="auto" aspect-ratio="16/9"/></br>
+                    <a href="steden2.php">Terug naar Overzicht</a>
                 <?php
             }
         }
@@ -51,10 +44,7 @@ $sql = "SELECT * from images";
             echo "No records found";
         }
         $conn->close();
-
         ?>
-    </div>
-</div>
 
 </body>
 </html>
