@@ -23,7 +23,7 @@ $sql = "SELECT * from images";
 
 <div class="jumbotron text-center">
     <h1>De leukste plekken in Europa</h1>
-    <p>Tips voor citytrips voor vrolijke vakantiegangers!</p>
+    <p>Citytrips voor vrolijke vakantiegangers!</p>
 </div>
 
 <div class="container">
